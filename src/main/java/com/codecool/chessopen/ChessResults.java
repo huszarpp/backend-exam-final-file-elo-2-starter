@@ -16,7 +16,6 @@ class ChessResults {
         readFileToChessPlayersList(fileName);
         chessPlayersList.sort(new SortByOpenPoints());
 
-
         return chessPlayersList.stream().map(ChessPlayer::getName).collect(Collectors.toList());
     }
 
@@ -24,10 +23,10 @@ class ChessResults {
 
         @Override
         public int compare(ChessPlayer chessPlayer1, ChessPlayer chessPlayer2) {
-
             if (chessPlayer1.getOpenPoints() == chessPlayer2.getOpenPoints()) {
                 return chessPlayer1.getName().compareTo(chessPlayer2.getName());
             }
+
             return chessPlayer2.getOpenPoints() - chessPlayer1.getOpenPoints();
         }
     }
@@ -71,6 +70,7 @@ class ChessResults {
         } catch (IllegalArgumentException iae) {
             System.out.println("Illegal points format!");
         }
+
         return intValue;
     }
 }
