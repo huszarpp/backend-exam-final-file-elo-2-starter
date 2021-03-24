@@ -1,15 +1,15 @@
 package com.codecool.chessopen;
 
-public class ChessPlayer {
+class ChessPlayer {
 
     private String name;
     private int openPoints;
 
-    public ChessPlayer(String name) {
+    ChessPlayer(String name) {
         this.name = name;
     }
 
-    public void addPoints(int points) {
+    void addPoints(int points) {
         if (isValidPoints(points)) {
             openPoints += points;
         }
@@ -19,11 +19,11 @@ public class ChessPlayer {
         return (0 <= points) && (points <= 2);
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getOpenPoints() {
+    int getOpenPoints() {
         return openPoints;
     }
 }
