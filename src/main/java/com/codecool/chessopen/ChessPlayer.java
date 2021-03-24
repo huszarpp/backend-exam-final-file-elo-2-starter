@@ -2,7 +2,7 @@ package com.codecool.chessopen;
 
 class ChessPlayer {
 
-    private String name;
+    private final String name;
     private int openPoints;
 
     ChessPlayer(String name) {
